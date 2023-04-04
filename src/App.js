@@ -3,6 +3,7 @@ import Gallery from './components/gallery';
 import Landing from './components/landing';
 import Navbar from './components/navbar';
 import Roadmap from './components/roadmap';
+import Team from './components/team';
 
 function App() {
   return (
@@ -12,6 +13,7 @@ function App() {
     <About />
     {/* <Roadmap /> */}
     <Gallery />
+    <Team />
     </>
   );
 }

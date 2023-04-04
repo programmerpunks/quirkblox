@@ -22,7 +22,7 @@ const Gallery = () => {
 
           <div className="font-poppins text-[55px]">{GalleryData.title}</div>
           <div className="mt-4 text-[#474747]">{GalleryData.description}</div>
-          <div className="hover:text-white py-4 cursor-pointer mt-10 w-[50%] md:w-1/4 font-poppins hover:bg-black flex justify-center rounded-lg  bg-white text-black border border-black">
+          <div className="hover:text-white py-3 cursor-pointer mt-10 w-[50%] md:w-1/2 lg:w-1/4 font-poppins hover:bg-black flex justify-center rounded-lg  bg-white text-black border border-black">
           {GalleryData.btnTitlte}
         </div>
         </div>
