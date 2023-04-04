@@ -12,7 +12,7 @@ const About = () => {
   return (
     <>
       <div className="bg-[#f9f9fc] px-0 md:px-[20%] pt-20 overflow-x-hidden">
-        <div className="w-full px-10 justify-center md:w-[60%]">
+        <div className="w-full px-10 justify-center lg:w-[60%]">
           <div class="relative flex items-center h-10">
             <span className="font-poppins">{AboutData.number}</span>
             <div class="flex justify-center items-center w-40 h-[1px] bg-[#474747] top-1/2 transform -translate-y-1/2 left-full ml-1"></div>
@@ -21,11 +21,11 @@ const About = () => {
           <div className="font-poppins text-[55px]">{AboutData.title}</div>
           <div className="mt-4 text-[#474747]">{AboutData.description}</div>
         </div>
-        <div className="flex flex-col md:flex-row p-1 md:p-10 w-full">
+        <div className="flex flex-col lg:flex-row p-1 lg:p-10 w-full">
           <img
             src={AboutData.image}
             alt="/"
-            className="w-full md:w-[50%]"
+            className="w-full lg:w-[50%]"
             data-aos="fade-right"
             data-aos-offset="300"
             data-aos-easing="ease-in-sine"
