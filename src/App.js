@@ -1,11 +1,13 @@
-import './App.css';
+import About from './components/about';
 import Landing from './components/landing';
 import Navbar from './components/navbar';
+
 function App() {
   return (
     <>
     <Navbar />
     <Landing />
+    <About />
     </>
   );
 }
