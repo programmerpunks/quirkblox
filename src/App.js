@@ -1,4 +1,5 @@
 import About from './components/about';
+import Gallery from './components/gallery';
 import Landing from './components/landing';
 import Navbar from './components/navbar';
 import Roadmap from './components/roadmap';
@@ -9,7 +10,8 @@ function App() {
     <Navbar />
     <Landing />
     <About />
-    <Roadmap />
+    {/* <Roadmap /> */}
+    <Gallery />
     </>
   );
 }
