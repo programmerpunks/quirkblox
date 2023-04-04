@@ -1,6 +1,6 @@
 import React from "react";
 
-import { LandingData } from "../../content/landing";
+import { LandingData } from "../../assets/Landing/content";
 import { SocialLinks } from "../../assets/socialLinks/content";
 
 const Landing = () => {

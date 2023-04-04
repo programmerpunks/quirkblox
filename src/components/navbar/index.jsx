@@ -1,6 +1,6 @@
 import React from "react";
 
-const logo = require("../../images/navbar/quirkBloxLogo.svg").default;
+const logo = require("../../assets/navbar/images/quirkBloxLogo.svg").default;
 
 const Navbar = () => {
   return (
