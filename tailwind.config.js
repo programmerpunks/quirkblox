@@ -8,6 +8,10 @@ module.exports = {
       backgroundImage: {
         "metalic-img": "url('./images/landing/backgroundImage.svg')",
       },
+      fontFamily: {
+        poppins: "'Poppins', sans-serif",
+      },
+      
     },
   },
   plugins: [],
