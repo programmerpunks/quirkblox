@@ -23,8 +23,8 @@ const Gallery = () => {
           <div className="font-poppins text-[55px]">{GalleryData.title}</div>
           <div className="mt-4 text-[#474747]">{GalleryData.description}</div>
           <div className="hover:text-white py-3 cursor-pointer mt-10 w-[50%] md:w-1/2 lg:w-1/4 font-poppins hover:bg-black flex justify-center rounded-lg  bg-white text-black border border-black">
-          {GalleryData.btnTitlte}
-        </div>
+            {GalleryData.btnTitlte}
+          </div>
         </div>
         <div
           className="flex flex-wrap  p-1 lg:p-10 w-full"
@@ -34,7 +34,11 @@ const Gallery = () => {
         >
           {GalleryData.gallery.map((pic) => {
             return (
-              <img src={pic} alt="/" className="w-full md:w-1/2 lg:w-1/3" />
+              <img
+                src={pic}
+                alt="/"
+                className="w-full md:w-1/2 lg:w-1/3 hover:scale-110 duration-500 cursor-pointer"
+              />
             );
           })}
         </div>
