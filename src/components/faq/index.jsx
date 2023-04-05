@@ -97,7 +97,11 @@ const FAQ = () => {
                       </div>
                     </div>
                   </summary>
-                  <div className="mt-4 leading-normal text-[#474747] mb-14 w-full my-3 text-md p-2">
+                  <div
+                    className="mt-4 leading-normal text-[#474747] mb-14 w-full my-3 text-md p-2"
+                    data-aos="fade-up"
+                    data-aos-anchor-placement="top-bottom"
+                  >
                     {faq.details}
                   </div>
                 </details>
