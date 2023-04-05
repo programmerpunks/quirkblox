@@ -5,7 +5,14 @@ import { RiMenu3Line } from "react-icons/ri";
 import { NavbarData } from "../../assets/navbar/content";
 const logo = require("../../assets/navbar/images/quirkBloxLogo.svg").default;
 
-const Navbar = () => {
+const Navbar = ({
+  connection,
+  disconnect,
+  getTokens,
+  logout,
+  readContract,
+  wallet,
+}) => {
   const [nav, setNav] = useState(false);
 
   const handleNav = () => {
@@ -31,12 +38,30 @@ const Navbar = () => {
               );
             })}
           </div>
-          <div className="py-2 ml-3 border rounded-lg">
-            <div className="px-10 w-full">Connect</div>
+          <div className="py-2 ml-3 flex items-center justify-center ">
+            <button
+              onClick={async () => {
+                logout
+                  ? (async function () {
+                      await disconnect();
+                    })()
+                  : (async function () {
+                      await connection();
+                      await readContract();
+                      await getTokens();
+                    })();
+              }}
+              className={`flex border-[1px] border-black p-1 hover:scale-125 duration-700 rounded-lg px-2 justify-center  text-black bg-transparent cursor-pointer ${
+                logout ? "hover:before:content-['Disconnect:']" : ""
+              }`}
+            >
+              <p className={`h-[12px] w-[12px] border ${logout?"bg-green-600":"bg-red-600"}  rounded-full flex items-center`}></p>
+              {wallet}
+            </button>
           </div>
           <div
             onClick={handleNav}
-            className="md:hidden cursor-pointer border flex justify-center items-center"
+            className="md:hidden cursor-pointer flex justify-center items-center"
           >
             <RiMenu3Line size={30} />
           </div>
