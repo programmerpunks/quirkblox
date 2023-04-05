@@ -23,7 +23,7 @@ const Landing = () => {
       <div className="hidden md:block index-2 absolute bottom-[30px] right-[60px]">
         {SocialLinks.map((lnk) => {
           return (
-            <div className="my-10 hover:scale-150 hover:opacity-100 duration-500 opacity-50">
+            <div key={lnk.title} className="my-10 hover:scale-150 hover:opacity-100 duration-500 opacity-50">
               <a
                 href={lnk.link}
                 rel="noreferrer"

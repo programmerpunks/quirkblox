@@ -16,9 +16,9 @@ const Footer = () => {
           className="w-full px-10 justify-center lg:w-[50%]"
           data-aos="fade-up"
         >
-          <div class="relative flex items-center h-10">
+          <div className="relative flex items-center h-10">
             <div className="mr-4 text-[16px]">{FooterData.title}</div>
-            <div class="flex justify-center items-center w-20 h-[1px] bg-[#474747] top-1/2 transform -translate-y-1/2 left-full ml-1"></div>
+            <div className="flex justify-center items-center w-20 h-[1px] bg-[#474747] top-1/2 transform -translate-y-1/2 left-full ml-1"></div>
           </div>
 
           <div className="mt-4 font-poppins text-[50px] ">
@@ -31,7 +31,7 @@ const Footer = () => {
         >
           {SocialLinks.map((lnk) => {
             return (
-              <div className="mx-4 md:mx-10 hover:scale-150 hover:opacity-100 duration-500 opacity-50">
+              <div key={lnk.title} className="mx-4 md:mx-10 hover:scale-150 hover:opacity-100 duration-500 opacity-50">
                 <a
                   href={lnk.link}
                   rel="noreferrer"

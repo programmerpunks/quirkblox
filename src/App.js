@@ -1,3 +1,4 @@
+import ScrollToTop from './components/ScrollToTop';
 import About from './components/about';
 import FAQ from './components/faq';
 import Footer from './components/footer';
@@ -20,6 +21,7 @@ function App() {
     <Partner />
     <FAQ />
     <Footer />
+    <ScrollToTop />
     </>
   );
 }
