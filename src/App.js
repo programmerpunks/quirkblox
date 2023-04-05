@@ -1,5 +1,6 @@
 import About from './components/about';
 import FAQ from './components/faq';
+import Footer from './components/footer';
 import Gallery from './components/gallery';
 import Landing from './components/landing';
 import Navbar from './components/navbar';
@@ -18,6 +19,7 @@ function App() {
     <Team />
     <Partner />
     <FAQ />
+    <Footer />
     </>
   );
 }

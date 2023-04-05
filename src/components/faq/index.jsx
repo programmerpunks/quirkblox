@@ -74,19 +74,19 @@ const FAQ = () => {
           <div className="mt-4 text-[#474747]">{FaqData.description}</div>
         </div>
         <div className="flex md:flex-row flex-col w-full overflow-x-hidden">
-          <div
-            className="flex flex-col md:w-[50%] w-full mt-20 px-4"
-            data-aos="fade-right"
-            data-aos-offset="300"
-            data-aos-easing="ease-in-sine"
-          >
+          <div className="flex flex-col md:w-[50%] w-full mt-20 px-4">
             {FaqData.faqSection.map((faq) => {
               return (
                 <details>
                   <summary className="flex items-center">
                     <div className="accordion-item flex w-full flex-wrap">
                       <div className="leading-[30px] cursor-pointer w-full">
-                        <div className="flex mb-4 justify-between">
+                        <div
+                          className="flex mb-4 justify-between"
+                          data-aos="fade-right"
+                          data-aos-offset="300"
+                          data-aos-easing="ease-in-sine"
+                        >
                           <div className="flex p-2  w-full items-center justify-start rounded-[4px]">
                             <span className="text-[16px]">{faq.summary}</span>
                           </div>
