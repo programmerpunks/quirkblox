@@ -5,7 +5,7 @@ import { SocialLinks } from "../../assets/socialLinks/content";
 
 const Landing = () => {
   return (
-    <div className="flex flex-col justify-center items-center bg-metalic-img h-[100vh]">
+    <div className="flex flex-col justify-center items-center bg-metalic-img h-[100vh]" id="LANDING"> 
       <div className="flex flex-col justify-center w-full px-4 lg:w-[35%]">
         <div className="justify-start font-poppins font-extrabold text-[#1A1A1A] text-4xl md:text-5xl lg:text-7xl">
           {LandingData.titles[0]}

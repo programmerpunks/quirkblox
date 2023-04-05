@@ -60,7 +60,7 @@ const Partner = () => {
   return (
     <>
       <div
-        className="px-0 md:px-[20%] pt-20 overflow-x-hidden mt-10 bg-[#f9f9fc]"
+        className="px-0 md:px-[20%] pt-20 overflow-x-hidden mt-10 bg-[#f9f9fc]" id="PARTNER"
         data-aos="fade-up"
       >
         <div className="w-full px-10 justify-center lg:w-[60%]">

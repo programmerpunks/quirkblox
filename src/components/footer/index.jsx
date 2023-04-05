@@ -11,7 +11,7 @@ const Footer = () => {
 
   return (
     <>
-      <div className="flex flex-col md:flex-row px-0 md:px-[20%] pt-20 overflow-x-hidden mt-10 bg-[#f9f9fc] py-20">
+      <div className="flex flex-col md:flex-row px-0 md:px-[20%] pt-20 overflow-x-hidden mt-10 bg-[#f9f9fc] py-5 md:py-20" id="COMMUNITY">
         <div
           className="w-full px-10 justify-center lg:w-[50%]"
           data-aos="fade-up"
@@ -26,7 +26,7 @@ const Footer = () => {
           </div>
         </div>
         <div
-          className="w-full mt-6 md:mt-0 flex px-10 items-center justify-center lg:w-[50%] mb-10 md:mb-0"
+          className="w-full mt-6 md:mt-0 flex px-10 items-center justify-center lg:w-[50%] mb-1 md:mb-0"
           data-aos="fade-up"
         >
           {SocialLinks.map((lnk) => {

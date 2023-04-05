@@ -11,7 +11,7 @@ const Team = () => {
   return (
     <>
       <div
-        className="px-0 md:px-[20%] pt-20 overflow-x-hidden"
+        className="px-0 md:px-[20%] pt-20 overflow-x-hidden" id="TEAM"
         data-aos="fade-up"
       >
         <div className="w-full px-10 justify-center lg:w-[60%]">

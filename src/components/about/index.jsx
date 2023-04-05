@@ -11,7 +11,7 @@ const About = () => {
 
   return (
     <>
-      <div className="bg-[#f9f9fc] px-0 md:px-[20%] pt-20 overflow-x-hidden">
+      <div className="bg-[#f9f9fc] px-0 md:px-[20%] pt-20 overflow-x-hidden" id="ABOUT">
         <div className="w-full px-10 justify-center lg:w-[60%]">
           <div class="relative flex items-center h-10">
             <span className="font-poppins">{AboutData.number}</span>

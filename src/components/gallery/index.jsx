@@ -11,7 +11,7 @@ const Gallery = () => {
   return (
     <>
       <div
-        className="bg-[#f9f9fc] px-0 md:px-[20%] pt-20 overflow-x-hidden"
+        className="bg-[#f9f9fc] px-0 md:px-[20%] pt-20 overflow-x-hidden" id="GALLERY"
         data-aos="fade-up"
       >
         <div className="w-full px-10 justify-center lg:w-[60%]">

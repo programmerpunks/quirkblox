@@ -61,7 +61,7 @@ const FAQ = () => {
   return (
     <>
       <div
-        className="px-0 md:px-[20%] pt-20 overflow-x-hidden mt-10 "
+        className="px-0 md:px-[20%] pt-20 overflow-x-hidden mt-10 " id="FAQ"
         data-aos="fade-up"
       >
         <div className="w-full px-10 justify-center lg:w-[60%]">
