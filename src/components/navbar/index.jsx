@@ -21,7 +21,7 @@ const Navbar = ({
   return (
     <>
       <div className=" flex justify-between z-50 fixed w-full p-5 md:px-20 bg-white">
-        <a className="flex justify-start w-[20%] md:w-[5%]" href="#LANDING">
+        <a className="flex justify-start hover:scale-110 duration-500 w-[20%] md:w-[5%]" href="/">
           <img src={logo} alt="/" />
         </a>
         <div className="flex justify-center py-3">
@@ -29,9 +29,13 @@ const Navbar = ({
             {NavbarData.map((nav) => {
               return (
                 <a
-                  href={nav.tag}
+                  href={
+                    window.location.pathname === "/mint"
+                      ? `/${nav.tag}`
+                      : `${nav.tag}`
+                  }
                   key={nav.title}
-                  className="flex px-4 hover:text-[#1A1A1A] hover:opacity-100 opacity-60 font-poppins text-[#474747] cursor-pointer"
+                  className="flex px-4 hover:text-[#1A1A1A] hover:scale-110 duration-500 hover:opacity-100 opacity-60 font-poppins text-[#474747] cursor-pointer"
                 >
                   {nav.title}
                 </a>
@@ -55,7 +59,11 @@ const Navbar = ({
                 logout ? "hover:before:content-['Disconnect:']" : ""
               }`}
             >
-              <p className={`h-[12px] w-[12px] border ${logout?"bg-green-600":"bg-red-600"}  rounded-full flex items-center`}></p>
+              <p
+                className={`h-[12px] w-[12px] border ${
+                  logout ? "bg-green-600" : "bg-red-600"
+                }  rounded-full flex items-center`}
+              ></p>
               {wallet}
             </button>
           </div>
@@ -84,9 +92,13 @@ const Navbar = ({
                 {NavbarData.map((nav) => {
                   return (
                     <a
-                      href={nav.tag}
+                      href={
+                        window.location.pathname === "/mint"
+                          ? `/${nav.tag}`
+                          : `${nav.tag}`
+                      }
                       key={nav.title}
-                      className="flex my-4 px-4 hover:text-[#1A1A1A] hover:opacity-100 opacity-60 font-poppins text-[#474747] cursor-pointer"
+                      className="flex my-4 px-4 hover:text-[#1A1A1A] hover:scale-110 duration-500 hover:opacity-100 opacity-60 font-poppins text-[#474747] cursor-pointer"
                     >
                       {nav.title}
                     </a>

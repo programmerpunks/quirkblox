@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
 import Aos from "aos";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { ethers } from "ethers";
+import React, { useEffect, useState } from "react";
 import { toast, ToastContainer } from "react-toastify";
 
 import "react-toastify/dist/ReactToastify.css";
@@ -128,32 +129,52 @@ function App() {
 
   return (
     <>
-      <Navbar
-        connection={connection}
-        disconnect={disconnect}
-        getTokens={getTokens}
-        logout={logout}
-        readContract={readContract}
-        wallet={wallet}
-      />
-      <Landing />
-      <About />
-      {/* <Roadmap /> */}
-      <Gallery />
-      <Team />
-      <Partner />
-      <FAQ />
-      <Mint
-        connection={connection}
-        disconnect={disconnect}
-        getTokens={getTokens}
-        images={images}
-        maxMintAmount={maxMintAmount}
-        price={price}
-        readContract={readContract}
-        userMintedAmount={userMintedAmount}
-        wallet={wallet}
-      />
+      <BrowserRouter>
+        <Navbar
+          connection={connection}
+          disconnect={disconnect}
+          getTokens={getTokens}
+          logout={logout}
+          readContract={readContract}
+          wallet={wallet}
+        />
+        <Routes>
+          <Route
+            exact
+            path="/"
+            element={
+              <>
+                <Landing />
+                <About />
+                {/* <Roadmap /> */}
+                <Gallery />
+                <Team />
+                <Partner />
+                <FAQ />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/mint"
+            element={
+              <>
+                <Mint
+                  connection={connection}
+                  disconnect={disconnect}
+                  getTokens={getTokens}
+                  images={images}
+                  maxMintAmount={maxMintAmount}
+                  price={price}
+                  readContract={readContract}
+                  userMintedAmount={userMintedAmount}
+                  wallet={wallet}
+                />
+              </>
+            }
+          />
+        </Routes>
+      </BrowserRouter>
       <Footer />
       <ToastContainer position="top-center" autoClose={2000} />
       <ScrollToTop />

@@ -25,7 +25,7 @@ const ScrollToTop = () => {
   return (
     <>
       {isVisible && (
-        <div className="my-20 flex justify-end pr-10 fixed right-[-30px] md:right-7 bottom-1 md:bottom-5 hover:cursor-pointer">
+        <div className="my-20 hover:scale-110 duration-500 flex justify-end pr-10 fixed right-[-30px] md:right-7 bottom-1 md:bottom-5 hover:cursor-pointer">
           <div
             className="shadow-2xl bg-black p-0 md:p-2 rounded-full"
             onClick={goToBtn}

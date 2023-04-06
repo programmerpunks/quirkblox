@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
+import React, { useEffect, useState } from "react";
 import { toast } from "react-toastify";
 
 import { ContractABI } from "./Contract";
@@ -82,8 +82,8 @@ function Mint({
   }, []);
 
   return (
-    <div className="flex flex-col bg-black items-center justify-center h-screen">
-      <div className="text-white text-2xl text-center font-bold bg-blue-light pb-5 bg-opacity-80">
+    <div className="flex flex-col bg-[#f9f9fc] items-center w-full justify-center md:h-screen">
+      <div className="text-black text-2xl text-center px-4 font-bold mt-[40%] md:mt-10 bg-blue-light pb-5 bg-opacity-80">
         <div>
           Total minted: {userMintedAmount}/{maxMintAmount}
         </div>
@@ -92,7 +92,7 @@ function Mint({
           <div className="outline grid md:grid-cols-2 grid-cols-1 px-20 py-5">
             <div className="flex">
               <button
-                className="btn2 md:w-12 w-9 py-2 relative border text-white border-white uppercase font-semibold "
+                className="btn2 md:w-12 w-9 hover:bg-red-500 border text-black border-black rounded-xl uppercase font-semibold "
                 type="button"
                 onClick={() => {
                   setAmount(amount - 1);
@@ -100,9 +100,11 @@ function Mint({
               >
                 -
               </button>
-              <p className="px-10 mt-1">{amount}</p>
+              <p className="px-10 mt-1 flex justify-center items-center">
+                {amount}
+              </p>
               <button
-                className="btn2 md:w-12 w-9  py-0 relative border text-white border-white uppercase font-semibold "
+                className="btn2 md:w-12 w-9  py-0 hover:bg-green-500  border text-black border-black rounded-xl uppercase font-semibold "
                 type="button"
                 onClick={() => {
                   setAmount(amount + 1);
@@ -112,7 +114,7 @@ function Mint({
               </button>
             </div>
             <button
-              className="btn2  md:py-0 py-3 relative  text-white uppercase font-semibold "
+              className="btn2  md:py-0 py-3 hover:bg-yellow-400 rounded-lg mx-4  text-black uppercase font-semibold "
               type="button"
               onClick={async () => {
                 await mint(amount);
@@ -120,21 +122,22 @@ function Mint({
                 await getTokens();
               }}
             >
-              <span className="absolute inset-0 bg-yelloww"></span>
-              <span className="absolute inset-0 flex justify-center items-center font-bold">
+              <span className=" inset-0 flex justify-center items-center font-bold">
                 Mint
               </span>
-              Mint
             </button>
           </div>
         </div>
       </div>
-      <div className="text-white justify-center px-10 py-10 grid text-center lg:grid-cols-3 md:grid-cols-3 sm:grid-cols-2 grid-cols-1">
+      <div className="text-white justify-center w-full flex flex-col md:flex-row text-center w-1/1 md:w-1/2 lg:w-1/1">
         {images.map((image, key) => {
           return (
-            <div key={key} className="p-8 border border-white/100">
-              <div className="bg-white/100 flex justify-center border border-white/80 anm">
-                <img src={image} alt="" className="h-auto w-auto" />
+            <div
+              key={key}
+              className="p-2 m-4 border border-black/100 rounded-xl"
+            >
+              <div className="bg-white/100 flex justify-center border border-black/80 rounded-xl anm">
+                <img src={image} alt="" className="h-auto w-auto rounded-xl" />
               </div>
             </div>
           );
