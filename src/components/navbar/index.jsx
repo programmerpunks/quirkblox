@@ -97,6 +97,7 @@ const Navbar = ({
                           ? `/${nav.tag}`
                           : `${nav.tag}`
                       }
+                      onClick={handleNav}
                       key={nav.title}
                       className="flex my-4 px-4 hover:text-[#1A1A1A] hover:scale-110 duration-500 hover:opacity-100 opacity-60 font-poppins text-[#474747] cursor-pointer"
                     >

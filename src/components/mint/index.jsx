@@ -17,7 +17,7 @@ function Mint({
   userMintedAmount,
   wallet,
 }) {
-  const [amount, setAmount] = useState(0);
+  const [amount, setAmount] = useState(1);
   const [check, setCheck] = useState(false);
 
   const { REACT_APP_CONTRACT_ADDRESS } = process.env;
