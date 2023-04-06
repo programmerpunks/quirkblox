@@ -95,7 +95,7 @@ function Mint({
                 className="btn2 md:w-12 w-9 hover:bg-red-500 border text-black border-black rounded-xl uppercase font-semibold "
                 type="button"
                 onClick={() => {
-                  setAmount(amount - 1);
+                  setAmount(amount <= 1 ? amount : amount - 1);
                 }}
               >
                 -
