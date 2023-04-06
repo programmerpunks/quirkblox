@@ -146,7 +146,7 @@ function App() {
               <>
                 <Landing />
                 <About />
-                {/* <Roadmap /> */}
+                <Roadmap />
                 <Gallery />
                 <Team />
                 <Partner />

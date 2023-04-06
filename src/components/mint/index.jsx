@@ -89,7 +89,7 @@ function Mint({
         </div>
         <div>The Price is {price}eth ETH + Gas Fee</div>
         <div className=" py-5 flex justify-center">
-          <div className="outline grid md:grid-cols-2 grid-cols-1 px-20 py-5">
+          <div className="border-2 border-black rounded-lg grid md:grid-cols-2 grid-cols-1 px-20 py-5">
             <div className="flex">
               <button
                 className="btn2 md:w-12 w-9 hover:bg-red-500 border text-black border-black rounded-xl uppercase font-semibold "
@@ -134,9 +134,9 @@ function Mint({
           return (
             <div
               key={key}
-              className="p-2 m-4 border border-black/100 rounded-xl"
+              className="p-2 m-4 border border-black/100 rounded-xl hover:scale-110 duration-500 cursor-pointer"
             >
-              <div className="bg-white/100 flex justify-center border border-black/80 rounded-xl anm">
+              <div className="bg-white/100 flex justify-center border border-black/80 rounded-xl anm ">
                 <img src={image} alt="" className="h-auto w-auto rounded-xl" />
               </div>
             </div>

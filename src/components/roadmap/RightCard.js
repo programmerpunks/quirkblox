@@ -1,30 +1,25 @@
-import RoadmapCard from './RoadmapCard'
+import RoadmapCard from "./RoadmapCard";
 
-function RightCard({ heading, list }) {
+function RightCard({ description, percentage, title }) {
   return (
     <>
-      <div className="flex sm:justify-end sm:w-full">
-        <div className="sm:pr-[1%] pt-[5%]">
-          <svg
-            viewBox="0 0 48 48"
-            fill="#581C87"
-            xmlns="http://www.w3.org/2000/svg"
-            className='-rotate-90 h-20 w-20 mb:max-sm:w-10 mb:max-sm:h-10 '
-          >
-            <path
-              d="M5.93882 13.9336L23.0362 4.53011C23.6363 4.20002 24.3637 4.20002 24.9638 4.53011L42.0612 13.9336C43.0988 14.5043 43.4161 15.8467 42.7438 16.8215L25.6464 41.6127C24.8515 42.7654 23.1485 42.7654 22.3536 41.6127L5.25624 16.8215C4.58391 15.8467 4.90118 14.5044 5.93882 13.9336Z"
-              stroke="#9333EA"
-              strokeWidth="1"
-              className='border-[2px] border-violet-900'
-            />
-          </svg>
+      <div
+        className="flex sm:justify-end sm:w-full overflow-x-hidden"
+        data-aos="fade-left"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+  >
+        <div className="sm:pr-[3%] flex items-center pt-[5%]">
+          <div className="flex items-center relative justify-center w-[70px] border-4 border-[#e6e6e6] rounded-full bg-[#f9f9fc] p-4">
+            {percentage}
+          </div>
         </div>
         <div className="sm:w-[45%] sm:flex sm:justify-start">
-          <RoadmapCard heading={heading} list={list} />
+          <RoadmapCard description={description} title={title} />
         </div>
       </div>
     </>
-  )
+  );
 }
 
-export default RightCard
+export default RightCard;
