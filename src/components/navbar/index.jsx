@@ -30,7 +30,7 @@ const Navbar = ({
               return (
                 <a
                   href={
-                    window.location.pathname === "/mint"
+                    window.location.pathname !== "/"
                       ? `/${nav.tag}`
                       : `${nav.tag}`
                   }
@@ -93,7 +93,7 @@ const Navbar = ({
                   return (
                     <a
                       href={
-                        window.location.pathname === "/mint"
+                        window.location.pathname !== "/"
                           ? `/${nav.tag}`
                           : `${nav.tag}`
                       }

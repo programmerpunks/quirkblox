@@ -11,7 +11,8 @@ const Gallery = () => {
   return (
     <>
       <div
-        className="bg-[#f9f9fc] px-0 md:px-[20%] pt-20 overflow-x-hidden" id="GALLERY"
+        className="bg-[#f9f9fc] px-0 md:px-[20%] pt-20 overflow-x-hidden"
+        id="GALLERY"
         data-aos="fade-up"
       >
         <div className="w-full px-10 justify-center lg:w-[60%]">
@@ -22,9 +23,11 @@ const Gallery = () => {
 
           <div className="font-poppins text-[55px]">{GalleryData.title}</div>
           <div className="mt-4 text-[#474747]">{GalleryData.description}</div>
-          <div className="hover:text-white py-3 cursor-pointer mt-10 w-[50%] md:w-1/2 lg:w-1/4 font-poppins hover:bg-black flex justify-center rounded-lg  bg-white text-black border border-black">
-            {GalleryData.btnTitlte}
-          </div>
+          <a href="/collection">
+            <div className="hover:text-white py-3 cursor-pointer mt-10 w-[50%] md:w-1/2 lg:w-1/4 font-poppins hover:bg-black flex justify-center rounded-lg  bg-white text-black border border-black">
+              {GalleryData.btnTitlte}
+            </div>
+          </a>
         </div>
         <div
           className="flex flex-wrap  p-1 lg:p-10 w-full"
@@ -32,7 +35,7 @@ const Gallery = () => {
           data-aos-offset="300"
           data-aos-easing="ease-in-sine"
         >
-          {GalleryData.gallery.map((pic,index) => {
+          {GalleryData.gallery.map((pic, index) => {
             return (
               <img
                 src={pic}

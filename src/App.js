@@ -19,10 +19,13 @@ import Roadmap from "./components/roadmap";
 import Team from "./components/team";
 import { ContractABI } from "./components/mint/Contract";
 import Mint from "./components/mint";
+import Collection from "./components/collection";
 
 function App() {
   const [images, setImages] = useState([]);
   const [logout, setLogout] = useState(false);
+  const [totalSupply, setTotalSupply] = useState(0);
+  const [totalMint, setTotalMint] = useState(0);
   const [maxMintAmount, setMaxMintAmount] = useState();
   const [price, setPrice] = useState(0);
   const [userMintedAmount, setUserMintedAmount] = useState(0);
@@ -65,6 +68,19 @@ function App() {
     let accounts = await provider.send("eth_requestAccounts", []);
     let address = accounts[0];
     const imagesTockens = await contract.nftsOnwedByWallet(address);
+    
+    const supply = await contract.totalSupply();
+    setTotalSupply(parseInt(supply,10));
+
+    const mintValue = await contract.maxSupply();
+    setTotalMint(parseInt(mintValue,10));
+
+    const maxMintAmount = await contract.maxMintAmount();
+    setMaxMintAmount(parseInt(maxMintAmount, 10));
+
+    const userMintedAmount = await contract.balanceOf(address);
+    setUserMintedAmount(parseInt(userMintedAmount, 10));
+
     let imagesLocal = [];
     await imagesTockens.map(async (image) => {
       const url = await contract.tokenURI(parseInt(image, 10));
@@ -164,12 +180,23 @@ function App() {
                   disconnect={disconnect}
                   getTokens={getTokens}
                   images={images}
+                  totalSupply = {totalSupply}
+                  maxSupply = {totalMint}
                   maxMintAmount={maxMintAmount}
                   price={price}
                   readContract={readContract}
                   userMintedAmount={userMintedAmount}
                   wallet={wallet}
                 />
+              </>
+            }
+          />
+          <Route
+            exact
+            path="/collection"
+            element={
+              <>
+                <Collection />
               </>
             }
           />
