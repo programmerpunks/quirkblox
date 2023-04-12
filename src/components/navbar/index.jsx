@@ -21,7 +21,7 @@ const Navbar = ({
   return (
     <>
       <div className=" flex justify-between z-50 fixed w-full p-5 md:px-20 bg-white">
-        <a className="flex justify-start hover:scale-110 duration-500 w-[20%] md:w-[5%]" href="/">
+        <a className="flex justify-start hover:scale-110 duration-500 w-[40%] md:w-[5%]" href="/">
           <img src={logo} alt="/" />
         </a>
         <div className="flex justify-center py-3">
@@ -42,7 +42,7 @@ const Navbar = ({
               );
             })}
           </div>
-          <div className="py-2 ml-3 flex items-center justify-center ">
+          <div className="py-2 ml-3 hidden md:flex items-center justify-center ">
             <button
               onClick={async () => {
                 logout
@@ -82,13 +82,13 @@ const Navbar = ({
             <div className="fixed left-0 top-0 w-full z-60 backdrop-blur-[80px] ease-in-out duration-500">
               <div className="flex justify-between items-center m-5">
                 <span className=" text-black ">
-                  <img src={logo} alt="/" />
+                  <img src={logo} alt="/" className="w-40" />
                 </span>
-              </div>
-              <ul className="p-6 py-4 text-lg font-extrabold  font-poppins">
                 <div onClick={handleNav} className="flex justify-end  m-5">
                   <RxCross2 size={30} />
                 </div>
+              </div>
+              <ul className="p-6 py-4 text-lg font-extrabold  font-poppins">
                 {NavbarData.map((nav) => {
                   return (
                     <a
@@ -106,7 +106,33 @@ const Navbar = ({
                   );
                 })}
               </ul>
+              <div className="py-6 flex items-center justify-center ">
+            <button
+              onClick={async () => {
+                logout
+                  ? (async function () {
+                      await disconnect();
+                    })()
+                  : (async function () {
+                      await connection();
+                      await readContract();
+                      await getTokens();
+                    })();
+              }}
+              className={`flex border-[1px] border-black p-1 hover:scale-125 duration-700 rounded-lg px-2 justify-center  text-black bg-transparent cursor-pointer ${
+                logout ? "hover:before:content-['Disconnect:']" : ""
+              }`}
+            >
+              <p
+                className={`h-[12px] w-[12px] border ${
+                  logout ? "bg-green-600" : "bg-red-600"
+                }  rounded-full flex items-center`}
+              ></p>
+              {wallet}
+            </button>
+          </div>
             </div>
+            
           </header>
         )}
       </div>
